@@ -79,14 +79,60 @@ class Items extends React.Component {
   }
   render(){
     return (
-        <div Class="card" inlineStyle="width: 18rem;">
-          <img src="..." Class="card-img-top" alt="..."></img>
-          <div Class="card-body">
-            <h5 Class="card-title">Card title</h5>
-            <p Class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" Class="btn btn-primary">Go somewhere</a>
+      <div>
+        <div class="container-fluid">
+          <div class="row">
+              <div Class="card col-lg-4 col-md-6 col-sm-12">
+                <img src="..." Class="card-img-top" alt="..."></img>
+                <div Class="card-body">
+                  <h5 Class="card-title">Card title</h5>
+                  <p Class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" Class="btn btn-primary">Add</a>
+                </div>
+              </div>
+              <div Class="card col-lg-4 col-md-6 col-sm-12">
+                <img src="..." Class="card-img-top" alt="..."></img>
+                <div Class="card-body">
+                  <h5 Class="card-title">Card title</h5>
+                  <p Class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" Class="btn btn-primary">Add</a>
+                </div>
+              </div>
+              <div Class="card col-lg-4 col-md-6 col-sm-12">
+                <img src="..." Class="card-img-top" alt="..."></img>
+                <div Class="card-body">
+                  <h5 Class="card-title">Card title</h5>
+                  <p Class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" Class="btn btn-primary">Add</a>
+                </div>
+              </div>
+              <div Class="card col-lg-4 col-md-6 col-sm-12">
+                <img src="..." Class="card-img-top" alt="..."></img>
+                <div Class="card-body">
+                  <h5 Class="card-title">Card title</h5>
+                  <p Class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" Class="btn btn-primary">Add</a>
+                </div>
+              </div>
+              <div Class="card col-lg-4 col-md-6 col-sm-12">
+                <img src="..." Class="card-img-top" alt="..."></img>
+                <div Class="card-body">
+                  <h5 Class="card-title">Card title</h5>
+                  <p Class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" Class="btn btn-primary">Add</a>
+                </div>
+              </div>
+              <div Class="card col-lg-4 col-md-6 col-sm-12">
+                <img src="..." Class="card-img-top" alt="..."></img>
+                <div Class="card-body">
+                  <h5 Class="card-title">Card title</h5>
+                  <p Class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" Class="btn btn-primary">Add</a>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+      </div>
     )
   } 
 }

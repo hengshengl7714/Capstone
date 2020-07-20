@@ -6,7 +6,7 @@ class Navbar extends React.Component {
     return (
       <div>
         <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#title">
             <img src="/pictures/Logo.png" width="70" height="auto" alt="" loading="lazy" />
              </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,13 +15,16 @@ class Navbar extends React.Component {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#carouselIndicators">Home <span className="sr-only">(current)</span></a>
+                <a class="nav-link" href="#title">Home <span className="sr-only">(current)</span></a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="#">Items</a>
+                <a class="nav-link" href="#shop-list">Items</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="#">Review</a>
+                <a class="nav-link" href="#question">Question for US</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#contact-heading">Contact for US</a>
               </li>
               <li Class="nav-item dropdown active">
                 <a Class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -46,7 +49,7 @@ class Heading extends React.Component {
   }
   render(){
     return (
-      <div class="heading">
+      <div id="title" class="heading">
         <h1> Adorable Pet Shop</h1>
         <h3> Granting your <i>pet</i> a <strong>comfortable</strong> life</h3>
       </div>
@@ -170,7 +173,7 @@ class ContactUs extends React.Component {
   render(){
     return(
       <div>
-        <h1 class="heading">Question for US</h1>
+        <h1 class="heading" id="question">Question for US</h1>
         <form>
             <div class="form-row">
               <div class="col">

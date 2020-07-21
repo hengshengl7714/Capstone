@@ -71,16 +71,16 @@ class Carousel extends React.Component {
         </ol>
         <div Class="carousel-inner">
           <div Class="carousel-item active">
-            <img src="/pictures/Carousel-1.JPG" Class=" d-block w-100 " alt="Carousel-1"></img>
+            <img src="pictures/Carousel-1.JPG" Class=" d-block w-100 fit-cover " alt="Carousel-1"></img>
           </div>
           <div Class="carousel-item" >
-            <img src="/pictures/Carousel-2.JPG" Class=" d-block w-100" alt="Carousel-2"></img>
+            <img src="pictures/Carousel-2.JPG" Class=" d-block w-100 fit-cover" alt="Carousel-2"></img>
           </div>
           <div Class="carousel-item">
-            <img src="/pictures/Carousel-3.JPG" Class=" d-block w-100" alt="Carousel-3"></img>
+            <img src="pictures/Carousel-3.JPG" Class=" d-block w-100 fit-cover" alt="Carousel-3"></img>
           </div>
           <div Class="carousel-item">
-            <img src="/pictures/Carousel-4.JPG" Class=" d-block w-100" alt="Carousel-4"></img>
+            <img src="pictures/Carousel-4.JPG" Class=" d-block w-100 fit-cover" alt="Carousel-4"></img>
           </div>
         </div>
         <a Class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
@@ -106,7 +106,7 @@ class Items extends React.Component {
         <div class="container-fluid">
           <div class="row">
               <div Class="card col-lg-4 col-md-6 col-sm-12">
-                <img src="/pictures/Bear-shirt.JPG" Class="card-img-top" alt="Bear-shirt"></img>
+                <img src="pictures/Bear-shirt.JPG" Class="card-img-top" alt="Bear-shirt"></img>
                 <div Class="card-body">
                   <h5 Class="card-title">Bear-strip style shirt</h5>
                   <p Class="card-text">Your pet is cute already! A cute suit for your pet to go out will attract more attention.</p>
@@ -115,7 +115,7 @@ class Items extends React.Component {
                 </div>
               </div>
               <div Class="card col-lg-4 col-md-6 col-sm-12">
-                <img src="/pictures/Panda-shirt.JPG" Class="card-img-top" alt="Panda-shirt"></img>
+                <img src="pictures/Panda-shirt.JPG" Class="card-img-top" alt="Panda-shirt"></img>
                 <div Class="card-body">
                   <h5 Class="card-title">Black Panda shirt</h5>
                   <p Class="card-text"> Tired of scrambling through stores in search of clothing for your pet? You can buy this product instead! It's great for your pet's comfort and it's warm.  </p>
@@ -124,7 +124,7 @@ class Items extends React.Component {
                 </div>
               </div>
               <div Class="card col-lg-4 col-md-6 col-sm-12">
-                <img src="/pictures/Hawaiian-style.JPG" Class="card-img-top" alt="Hawaiian-style"></img>
+                <img src="pictures/Hawaiian-style.JPG" Class="card-img-top" alt="Hawaiian-style"></img>
                 <div Class="card-body">
                   <h5 Class="card-title">Hawaiian-style</h5>
                   <p Class="card-text">Hot Summer is here! The Hawaiian style polo shirt definitely suit your pet and let the pet has a cool summer!!</p>
@@ -133,7 +133,7 @@ class Items extends React.Component {
                 </div>
               </div>
               <div Class="card col-lg-4 col-md-6 col-sm-12">
-                <img src="/pictures/Strip-shirt.JPG" Class="card-img-top" alt="Strip-shirt"></img>
+                <img src="pictures/Strip-shirt.JPG" Class="card-img-top" alt="Strip-shirt"></img>
                 <div Class="card-body">
                   <h5 Class="card-title">Red-strip hoodie</h5>
                   <p Class="card-text">Comfortable casual sport hoodie for the pets. The cloth is adorable for your lovely sweet pet. </p>
@@ -142,7 +142,7 @@ class Items extends React.Component {
                 </div>
               </div>
               <div Class="card col-lg-4 col-md-6 col-sm-12">
-                <img src="/pictures/Dog-coat.JPG" Class="card-img-top" alt="Dog-coat"></img>
+                <img src="pictures/Dog-coat.JPG" Class="card-img-top" alt="Dog-coat"></img>
                 <div Class="card-body">
                   <h5 Class="card-title">Winter Coat</h5>
                   <p Class="card-text">Warm coat that gives your pet a warmful winter. Let your pet run around without fearing the coldness.</p>
@@ -151,7 +151,7 @@ class Items extends React.Component {
                 </div>
               </div>
               <div Class="card col-lg-4 col-md-6 col-sm-12">
-                <img src="/pictures/Dog-nest.JPG" Class="card-img-top" alt="Dog-nest"></img>
+                <img src="pictures/Dog-nest.JPG" Class="card-img-top" alt="Dog-nest"></img>
                 <div Class="card-body">
                   <h5 Class="card-title">Dountbed for pets</h5>
                   <p Class="card-text">Ultra soft calming bed for your pet. Made by self-warming Cozy Plush, so your pet will have a warming indoor sleeping. </p>
@@ -243,11 +243,22 @@ class Footer extends React.Component {
   }
 }
 
-
-ReactDOM.render(<Navbar />, document.getElementById('root'));
-ReactDOM.render(<Heading />, document.getElementById('heading'));
-ReactDOM.render(<Carousel />, document.getElementById('caro'));
-ReactDOM.render(<Items />, document.getElementById('List'));
-ReactDOM.render(<ContactUs />, document.getElementById('ContactUS'));
-ReactDOM.render(<Contact />, document.getElementById('contact'));
-ReactDOM.render(<Footer />, document.getElementById('footer'));
+class Website extends React.Component {
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return(
+      <div>
+        <Navbar />
+        <Heading />
+        <Carousel />
+        <Items />
+        <ContactUs />
+        <Contact />
+        <Footer />
+      </div>
+    )
+  }
+}
+ReactDOM.render(<Website />, document.getElementById('root'));

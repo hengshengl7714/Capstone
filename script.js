@@ -7,7 +7,7 @@ class Navbar extends React.Component {
       <div>
         <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#title">
-            <img src="/pictures/Logo.png" width="70" height="auto" alt="" loading="lazy" />
+            <img src="pictures/Logo.png" width="70" height="auto" alt="" loading="lazy" />
              </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -157,6 +157,26 @@ class Items extends React.Component {
                   <p Class="card-text">Ultra soft calming bed for your pet. Made by self-warming Cozy Plush, so your pet will have a warming indoor sleeping. </p>
                   <h2><span class="badge badge-danger"><strike>$24.99</strike></span></h2>
                   <h2><span class="badge badge-success">$16.99</span></h2>
+                  <a href="#" Class="btn btn-primary">Add</a>
+                </div>
+              </div>
+              <div Class="card col-lg-4 col-md-6 col-sm-12">
+                <img src="pictures/Pet-shoe.jpg" Class="card-img-top" alt="Dog-shoe"></img>
+                <div Class="card-body">
+                  <h5 Class="card-title">Boots for pets</h5>
+                  <p Class="card-text"> soft boot for your pet. Protected pets from coldness and let them run around the park.  </p>
+                  <h2><span class="badge badge-danger"><strike>$24.99</strike></span></h2>
+                  <h2><span class="badge badge-success">$20.59</span></h2>
+                  <a href="#" Class="btn btn-primary">Add</a>
+                </div>
+              </div>
+              <div Class="card col-lg-4 col-md-6 col-sm-12">
+                <img src="pictures/Pet-bag.jpg" Class="card-img-top" alt="Dog-nest"></img>
+                <div Class="card-body">
+                  <h5 Class="card-title">Earth Eated Dog Poop bags</h5>
+                  <p Class="card-text">Guaranteed Leak-proof by having Extra Thick and Strong bags for pets. 15 Bags per Roll </p>
+                  <h2><span class="badge badge-danger"><strike>$11.99</strike></span></h2>
+                  <h2><span class="badge badge-success">$8.99</span></h2>
                   <a href="#" Class="btn btn-primary">Add</a>
                 </div>
               </div>

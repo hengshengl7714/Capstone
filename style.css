@@ -24,3 +24,9 @@ body{
   max-width: 100%;
   height: auto;
 }
+#total {
+  background: #05c5ff; 
+  font-weight:bold; 
+  color:white;
+  text-align:center;
+}

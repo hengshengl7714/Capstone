@@ -26,16 +26,6 @@ class Navbar extends React.Component {
               <li class="nav-item active">
                 <a class="nav-link" href="#contact-heading">Contact for US</a>
               </li>
-              <li Class="nav-item dropdown active">
-                <a Class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Cart
-                </a>
-                <div Class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a Class="dropdown-item">Quantity</a>
-                  <div Class="dropdown-divider"></div>
-                  <a Class="dropdown-item">Price</a>
-                </div>
-              </li>
             </ul>
           </div>
         </nav>
@@ -99,6 +89,8 @@ class Carousel extends React.Component {
 class Items extends React.Component {
   constructor(props){
     super(props);
+    this.Increment = this.Increment.bind(this)
+    this.Decrement = this.Decrement.bind(this)
     this.state = {
       listOfItems: [
         {
@@ -165,14 +157,25 @@ class Items extends React.Component {
           image: "pictures/Pet-bag.JPG",
           alt: "Pet-bag."
         },
-      ]
+      ],
+      cartPrice: 0
     }
+  }
+  Increment = (e) => {
+    console.log(this.state.cartPrice)
+    this.setState({cartPrice: parseFloat(e.target.dataset.price)  + parseFloat(this.state.cartPrice)})
+  }
+  Decrement = (e) => {
+    console.log(this.state.cartPrice)
+    this.state.cartPrice < 0 ? this.state.cartPrice = 0 : this.state.cartPrice ;
+    this.setState({cartPrice: parseFloat(this.state.cartPrice) - parseFloat(e.target.dataset.price)})
     
   }
   render(){
     return(
       <div>
         <h1 class="heading" id="shop-list">Shop</h1>
+        <h2 id = "total"> Total: ${this.state.cartPrice}</h2>
           <div class="container-fluid">
             <div class="row">
               {this.state.listOfItems.map( item => (
@@ -182,8 +185,8 @@ class Items extends React.Component {
                         <h5 Class="card-title">{item.title}</h5>
                         <p Class="card-text">{item.description}</p>
                         <h2><span class="badge badge-success">${item.price}</span></h2>
-                        <a href="#" Class="btn btn-primary m-2">+</a>
-                        <a href="#" Class="btn btn-primary">-</a>
+                        <a data-price = {item.price} onClick = {this.Increment} Class="btn btn-primary m-2">+</a>
+                        <a data-price = {item.price} onClick = {this.Decrement} Class="btn btn-primary">-</a>
                       </div>
                     </div>
               ))}
@@ -275,14 +278,20 @@ class Footer extends React.Component {
 class Website extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+    quantity: 0,
+    cartPrice: 0
+    };
+
   }
+
   render(){
     return(
       <div>
-        <Navbar />
+        <Navbar quantity = {this.state.quantity} price = {this.state.cartPrice} />
         <Heading />
         <Carousel />
-        <Items />
+        <Items  cartPrice = {this.state.cartPrice}/>
         <ContactUs />
         <Contact />
         <Footer />

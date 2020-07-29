@@ -89,8 +89,6 @@ class Carousel extends React.Component {
 class Items extends React.Component {
   constructor(props){
     super(props);
-    this.Increment = this.Increment.bind(this)
-    this.Decrement = this.Decrement.bind(this)
     this.state = {
       listOfItems: [
         {
@@ -158,24 +156,26 @@ class Items extends React.Component {
           alt: "Pet-bag."
         },
       ],
-      cartPrice: 0
+      cartPrice: 0,
+      quantity: 0
     }
   }
   Increment = (e) => {
-    console.log(this.state.cartPrice)
     this.setState({cartPrice: parseFloat(e.target.dataset.price)  + parseFloat(this.state.cartPrice)})
+    this.setState({quantity: this.state.quantity + 1})
   }
   Decrement = (e) => {
-    console.log(this.state.cartPrice)
-    this.state.cartPrice < 0 ? this.state.cartPrice = 0 : this.state.cartPrice ;
-    this.setState({cartPrice: parseFloat(this.state.cartPrice) - parseFloat(e.target.dataset.price)})
-    
+    this.state.cartPrice <= 0 ? this.state.cartPrice = 0 : this.state.cartPrice;
+    this.state.quantity <= 0 ? this.state.quantity = 0 : this.state.quantity;
+    this.setState({cartPrice: (parseFloat(this.state.cartPrice) - parseFloat(e.target.dataset.price))})
+    this.setState({quantity: this.state.quantity - 1})
   }
+
   render(){
     return(
       <div>
         <h1 class="heading" id="shop-list">Shop</h1>
-        <h2 id = "total"> Total: ${this.state.cartPrice}</h2>
+        <h2 id = "total"> Total: <span class="badge badge-success">${this.state.cartPrice.toFixed(2)}</span><br /> Quantity: <span class="badge badge-warning">{this.state.quantity}</span></h2>
           <div class="container-fluid">
             <div class="row">
               {this.state.listOfItems.map( item => (

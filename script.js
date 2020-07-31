@@ -165,10 +165,20 @@ class Items extends React.Component {
     this.setState({quantity: this.state.quantity + 1})
   }
   Decrement = (e) => {
-    this.state.cartPrice <= 0 ? this.state.cartPrice = 0 : this.state.cartPrice;
-    this.state.quantity <= 0 ? this.state.quantity = 0 : this.state.quantity;
-    this.setState({cartPrice: (parseFloat(this.state.cartPrice) - parseFloat(e.target.dataset.price))})
-    this.setState({quantity: this.state.quantity - 1})
+   // this.state.cartPrice <= 0 ? this.state.cartPrice = 0 : this.state.cartPrice;
+   // this.state.quantity <= 0 ? this.state.quantity = 0 : this.state.quantity;
+    const diff = parseFloat(this.state.cartPrice) -  parseFloat(e.target.dataset.price)
+    if (diff < 0) {
+      this.setState({cartPrice: 0})
+    }
+    else {
+      this.setState({cartPrice: diff})
+    }
+    if (this.state.quantity > 0){
+      this.setState({quantity:this.state.quantity - 1})
+    }
+   // this.setState({cartPrice: (parseFloat(this.state.cartPrice) - parseFloat(e.target.dataset.price))})
+    // this.setState({quantity: this.state.quantity - 1})
   }
 
   render(){

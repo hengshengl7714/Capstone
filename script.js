@@ -195,8 +195,8 @@ class Items extends React.Component {
                         <h5 Class="card-title">{item.title}</h5>
                         <p Class="card-text">{item.description}</p>
                         <h2><span class="badge badge-success">${item.price}</span></h2>
-                        <a data-price = {item.price} onClick = {this.Increment} Class="btn btn-primary m-2">+</a>
-                        <a data-price = {item.price} onClick = {this.Decrement} Class="btn btn-primary">-</a>
+                        <a data-price = {item.price} onClick = {this.Increment} Class="btn btn-primary text-white m-2">+</a>
+                        <a data-price = {item.price} onClick = {this.Decrement} Class="btn btn-primary text-white">-</a>
                       </div>
                     </div>
               ))}

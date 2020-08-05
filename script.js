@@ -218,20 +218,20 @@ class ContactUs extends React.Component {
         <h1 class="heading" id="question">Question for US</h1>
         <form>
             <div class="form-row">
-              <div class="col">
+              <div class="col m-2">
                 <label> First Name</label>
                 <input type="text" class="form-control"></input>
               </div>
-              <div class="col">
+              <div class="col m-2">
                 <label> Last Name</label>
                 <input type="text" class="form-control"></input>
               </div>
             </div>
-            <div class="form-group">
+            <div class="form-group m-2">
               <label for="InputEmail1">Email address</label>
               <input type="email" class="form-control" id="InputEmail1"></input>
             </div>  
-            <div class="form-group">
+            <div class="form-group m-2">
               <label for="ControlSelect">Question relating to our product</label>
               <select class="form-control" id="ControlSelect">
                 <option> Bear-strip style shirt</option>
@@ -242,11 +242,11 @@ class ContactUs extends React.Component {
                 <option> Dountbed for pets </option>
               </select>
             </div>
-            <div class="form-group">
+            <div class="form-group m-2">
             <label for="ControlTextarea">Your Message</label>
             <textarea class="form-control" id="ControlTextarea" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary m-2">Submit</button>
         </form>
       </div>
     )

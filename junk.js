@@ -1,4 +1,4 @@
-/*
+
 class Items extends React.Component {
 
   constructor(props){
@@ -91,7 +91,7 @@ class Items extends React.Component {
     )
   } 
 }
-*/
+
 
 
 class Items extends React.Component {
